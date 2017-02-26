@@ -1,0 +1,175 @@
+*{padding:0;margin:0;}
+#header{
+	background: #333;
+	padding:10px 15px;
+	overflow:hidden;
+	height:38px;
+	position: relative;
+}
+#header .title{
+	float:left;
+	text-indent:-999px;
+	color:#fff;
+	width:117px;
+}
+#header img{
+	height:80px;
+	width:123px;
+	position: absolute;
+	left:20px;
+	top:0;
+}
+#header .nav{
+	float:right;
+	padding:10px 0;
+}
+#header .nav li{
+	float:left;
+	margin-left:25px;
+}
+#header .nav a{
+	text-decoration: none;
+	color:#fff;
+}
+#header .nav a:visited{
+	color:#dedede;
+}
+#header .nav a:hover{
+	color:red;
+}
+#header .nav a:active{
+	color:#ccc;
+}
+#content{
+	background: #ccc;
+	padding:20px 0 20px 0;
+}
+#content .article{
+	background: #fff;
+	margin:0 20px 20px;
+	padding:30px 20px;
+	box-shadow:5px 5px #aaa;
+}
+#content .article *{
+	margin:1em 0;
+}
+#content .article h3{
+	color:#666;
+}
+#content .article .author{
+	color:#888;
+	text-indent: 0;
+	font:12px/1.5em "宋体";
+}
+#content .article p{
+	text-indent: 2em;
+	font:14px/1.5em "宋体";
+}
+#content #second ul{
+	list-style:none;
+	text-indent: 2em;
+	font:14px/1.5em "宋体";
+}
+#content #third p{
+	width:200px;
+	height:220px;
+	text-align:center;
+	border:1px solid;
+	text-indent:0;
+}
+#content #third img{
+	width:160px;
+	height:160px;
+}
+#content #fourth ol{
+	list-style: inside decimal;
+	padding:0 2em;
+	font:14px/1.5em "宋体";
+}
+#content #fourth table{
+	border-spacing: 0;
+	width:100%;
+	text-align:left;
+	line-height: 20px;
+	border-top:1px solid #aaa;
+	border-right:1px solid #aaa;
+}
+#content #fourth table th,#content #fourth table td{
+	border-bottom:1px solid #aaa;
+	border-left:1px solid #aaa;
+	padding:3px;
+}
+#content #fourth table td{
+	font:14px/1.5em "宋体";
+}
+#content #fourth table thead{
+	color:#fff;
+	background: #333;
+}
+#content #fourth table tfoot td{
+	font-weight: bold;
+	background: #ddd;
+}
+#content #sidebox{
+	margin:0 30px 0;
+	padding:30px 20px;
+	background: #fff;
+	box-shadow: 5px 5px #aaa;
+}
+#content #sidebox h2{
+	font:bold 14px/1.5em "宋体";
+	text-indent: 1em;
+	padding:10px;
+}
+#content #sidebox h3{
+	display: none;
+}
+#content #sidebox form{
+	margin:0 250px ;
+	font: 12px/1.5em "宋体";
+}
+#content #sidebox div{
+	width:300px;
+	padding:10px 2px 0;
+}
+#content #sidebox #userinfo label,#content #sidebox #userchoice span{
+		width: 100px;
+		height: 22px;
+		line-height: 22px;
+		text-align:right;
+		cursor:pointer;
+		display: inline-block;
+		margin-right: 5px;
+}
+#content #sidebox #userinfo input{
+		width: 150px;
+		height: 17px;
+		padding:3px 2px 0;
+}
+#content #sidebox #userinfo p{
+	text-indent: 113px;
+	padding:3px 0;
+	color:#ccc;
+}
+#content #sidebox #userchoice input{
+	margin: 3px 3px 3px 4px;
+	vertical-align:middle;
+	 margin-top:0;
+}
+#content #sidebox button{
+	width:100%;
+	height:40px;
+	background: #1f4f86;
+	border-radius: 10px;
+	font:bold 16px/1.5em "宋体";
+	color:#fff;
+}
+footer{
+	width:100%;
+	height:50px;
+	text-align: center;
+	background: #000;
+	font:bold 14px/1.5em "宋体";
+	color: #fff;
+	padding: 10px 0;
+}
