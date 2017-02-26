@@ -53,8 +53,8 @@
 	visibility:none;
 }
 #content .mainbox{
-	width:1000px;
-	float:left;
+	width:auto;
+	margin-right: 360px;
 }
 #content .article{
 	background: #fff;
@@ -133,11 +133,13 @@
 	background: #ddd;
 }
 #content #sidebox{
-	float:right;
+	position: absolute;
+	top:78px;
+	right:0;
 	margin:0 20px 30px;
 	background: #fff;
 	box-shadow: 5px 5px #aaa;
-	width:auto;
+	width:340px;
 }
 #content #sidebox h2{
 	font:bold 14px/1.5em "宋体";
@@ -151,11 +153,11 @@
 	font: 12px/1.5em "宋体";
 }
 #content #sidebox div{
-	width:90%;
+	width:300px;
 	padding:10px 2px 0;
 }
 #content #sidebox #userinfo label,#content #sidebox #userchoice span{
-		width: 33%;
+		width: 100px;
 		height: 22px;
 		line-height: 22px;
 		text-align:right;
@@ -164,12 +166,12 @@
 		margin-right: 5px;
 }
 #content #sidebox #userinfo input{
-		width: 57%;
+		width: 150px;
 		height: 17px;
 		padding:3px 2px 0;
 }
 #content #sidebox #userinfo p{
-	text-indent: 37%;
+	text-indent: 107px;
 	padding:3px 0;
 	color:#ccc;
 }
