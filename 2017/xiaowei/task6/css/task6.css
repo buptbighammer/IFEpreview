@@ -184,7 +184,7 @@ header hr{
 }
 .three .left img{
 	float:right;
-	padding:10px 0 10px 10px;
+	padding:10px 5px 10px 10px;
 	width:200px;
 	height:250px;
 }
@@ -222,6 +222,7 @@ header hr{
 	font:70px "Microsoft YaHei";
 	color:#f5e327;
 	float:left;
+	padding-right:5px;
 }
 .three .left p.indent{
 	text-indent:2em;
