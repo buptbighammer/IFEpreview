@@ -14,11 +14,13 @@
 <script type="text/javascript">
 
 (function() {
-  var button = document.getElementById("button");
-  button.onclick = function(){
-    var value = document.getElementById("aqi-input").value;
-    var display = document.getElementById("aqi-display").firstChild;
-    display.nodeValue = value;
+  /*
+  立即执行函数，所以onclick绑定的事件需要为函数
+  需要改变的内容是一个textNode，为标签元素的第一个子节点
+  需要获取的值是input元素的value属性
+  */
+  document.getElementById("button").onclick = function(){
+    document.getElementById("aqi-display").firstChild.nodeValue = document.getElementById("aqi-input").value;
   }
 
 })();
