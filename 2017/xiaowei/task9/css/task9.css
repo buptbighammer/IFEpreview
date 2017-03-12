@@ -1,0 +1,733 @@
+*{
+	padding:0;
+	margin:0;
+	font-family:"Microsoft Yahei";
+}
+header{
+	height:58px;
+	background: url("../images/logo.png") no-repeat 52px 11px #2189c0;
+}
+header div{
+	float:right;
+	color:#fff;
+	font-size:12px;
+	line-height: 58px;
+	padding-right:80px;
+	text-indent:20px;
+	cursor:pointer;
+	background: url("../images/login.png") no-repeat 0 21px;
+}
+header input{
+	float:right;
+	height:28px;
+	width:313px;
+	border-radius:14px;
+	border:none;
+	margin-top:15px;
+	margin-right:21px;
+	text-indent:40px;
+	background: url("../images/zoom.png") no-repeat 18px 5.5px #fff;
+}
+aside{
+	width:262px;
+	height:1208px;
+	float:left;
+	background: #2b2e3d;
+	font-size:13px;
+}
+aside h2{
+	height:60px;
+	position:relative;
+	padding:19px 46px 0;
+}
+aside h2 span{
+	display:inline-block;
+}
+aside h2 span.outer{
+	width:56px;
+	height:56px;
+	border:solid 2px #b9babe;
+	border-radius:50%;
+	position:absolute;
+}
+aside h2 span.inner{
+	width:48px;
+	height:48px;
+	border-radius:50%;
+	background: #b9babe;
+	position:absolute;
+	top:4px;
+	left:4px;
+}
+aside h2 span.title{
+	position:absolute;
+	line-height: 60px;
+	left:123px;
+	color:#e3e3e3;
+}
+aside div{
+	padding:24px 64px;
+}
+aside p{
+	display:inline-block;
+	width:26px;
+	color:#65778b;
+}
+aside p.collection{
+	padding-right:30px;
+}
+aside hr{
+	height:30px;
+	width:4px;
+	border:none;
+	border-left:solid 4px #383e4e;
+	display:inline-block;
+	margin-right:30px;
+}
+aside ul{
+	color:#6e8096;
+}
+aside .unselected{
+	padding:0 46px 33px;
+}
+aside .report{
+	background: #383e4e;
+	padding:17px 46px 15px;
+}
+aside .report li{
+	padding-top:15px;
+}
+
+aside li.selected{
+	color:#eeedf2;
+}
+aside .report{
+	list-style:square inside url("../images/file_open.png");
+	margin-bottom:15px;
+}
+aside .report .file{
+	list-style:square inside url("../images/file_close.png");
+	padding-left:42px;
+	background: url("../images/close_arrow.png") no-repeat 26px 17px;
+}
+aside .report .selected_file{
+	list-style:square inside url("../images/file_cur.png");
+	padding-left:42px;
+	background: url("../images/open_arrow.png") no-repeat 24px 19px;
+}
+aside .report .doc{
+	list-style:square inside url("../images/doc_close.png");
+	padding-left:17px;
+}
+aside .report .selected_doc{
+	list-style:square inside url("../images/doc_open.png");
+	padding-left:17px;
+}
+aside .star{
+	list-style:square inside url("../images/star.png");
+}
+aside .share{
+	list-style:square inside url("../images/share.png");
+}
+aside .account{
+	list-style:square inside url("../images/user_info.png");
+}
+button{
+	width:50px;
+	height:28px;
+	line-height: 28px;
+	background: #398ac1;
+	color:#fff;
+	border:none;
+}
+div.container{
+	margin-left:262px;
+	color:#b7b7b7;
+	font-size:13px;
+}
+.container .header{
+	height:32px;
+	line-height:32px;
+	padding-left:30px;
+}
+.container .header span{
+	padding-right:13px;
+}
+.container .header .word{
+	cursor:pointer;
+}
+.container .header .doc{
+	color:#6697c0;
+}
+.container .bigbox{
+	padding-top:21px;
+	background: #eee;
+	height:1155px;
+}
+.container .main{
+	width:892px;
+	margin:0 auto;
+	overflow: hidden;
+}
+div.main div.first{
+	background: #fff;
+	padding:11px 30px;
+	height:60px;
+	border:solid 1px #e7e7e7;
+	position: relative;
+}
+select{
+	-webkit-appearance: textarea;
+	-moz-appearance: textarea;
+	appearance:textarea;
+	background: url("../images/black_arrow.png") no-repeat 90% center;
+	text-indent:7px;
+	border:solid 1px #b7b7b7;
+}
+div.main div.first p{
+	position:absolute;
+	top:25px;
+	left:352px;
+	width:27px;
+	height:37px;
+	line-height: 37px;
+	text-indent: 14px;
+	font-size:10px;
+	color:#fff;
+	cursor:pointer;
+	background: url("../images/change.png") no-repeat #fff;
+}
+div.main div.first label{
+	padding:3px 13px 3px 0;
+}
+div.main div.first select,div.main div.first input{
+	height:24px;
+	margin:3px 0;
+}
+#item{
+	width:68px;
+	background: url("../images/blue_arrow.png") no-repeat 90% center;
+}
+#deal,#buyer,#seller{
+	background: url("../images/black_arrow.png") no-repeat 100px center;
+}
+#buyer,#seller,#deal,#date{
+	width:117px;
+}
+#time,#number{
+	width:69px;
+}
+div.main div.first label.buyer{
+	padding-left:34px;
+}
+div.main div.first label.date,div.main div.first label.number{
+	padding-left:57px;
+}
+div.main div.first label.time{
+	padding-left:11px;
+}
+div.main div.first label.deal{
+	padding:3px 13px 3px 15px;
+}
+div.main div.first label.seller{
+	padding-left:162px;
+}
+div.main div.first button{
+	position: absolute;
+	right:100px;
+	top:50%;
+	transform:translateY(-50%);
+}
+div.main div.second{
+	overflow: hidden;
+	position: relative;
+}
+div.main div.second p{
+	width:110px;
+	height:64px;
+	border:none;
+	border-top:solid 1px #cbccd0;
+	border-left:solid 1px #cbccd0;
+	margin:10px 2px;
+	float:left;
+	background: #fff;
+}
+div.main div.second p.arrow{
+	width:28px;
+}
+div.main div.second p.left_arrow{
+	margin-left:0;
+}
+div.main div.second .left,div.main div.second .right{
+	display: block;
+	width:20px;
+	height: 64px;
+	overflow: hidden;
+	position: relative;
+	cursor:pointer;
+}
+div.main div.second .left-arrow1,div.main div.second .left-arrow2,div.main div.second .right-arrow1,div.main div.second .right-arrow2{
+	width:0;
+	height:0;
+	display:inline-block;
+	border-top:10px transparent dashed;
+	border-bottom:10px transparent dashed;
+	position: absolute;
+	top:22px;
+	left:0;
+}
+div.main div.second .left-arrow1,.left-arrow2{
+	border-left:10px transparent dashed;
+}
+div.main div.second .left-arrow1{
+	border-right:10px #b7b7b7 solid;
+}
+div.main div.second .left-arrow2{
+	border-right:10px white solid;
+	position: absolute;
+	left:1px;/*重要*/
+	z-index:999;
+}
+div.main div.second .right-arrow1,.right-arrow2{
+	border-right:10px transparent dashed;
+}
+div.main div.second .right-arrow1{
+	border-left:10px #b7b7b7 solid;
+	left:10px;
+}
+div.main div.second .right-arrow2{
+	border-left:10px white solid;
+	position: absolute;
+	left:9px;/*重要*/
+	z-index:999;
+}
+div.main div.second .left_arrow:hover,div.main div.second .right_arrow:hover{
+	background:  #398ac1;
+}
+div.main div.second span{
+	color:#aaa;
+	font-size:17px;
+	display: inline-block;
+	padding-left:19px;
+}
+div.main div.second span.time{
+	color:#333;
+	font-size:13px;
+	padding-left:27px;
+	padding-top:12px;
+}
+div.main div.second span.money{
+	color:#ed6502;
+	font-size:20px;
+	padding:0;
+}
+div.main div.second hr{
+	position: absolute;
+	height: 4px;
+	width:110px;
+	top:11px;
+	left:34px;
+	border:none;
+	border-top:solid 4px #398ac1;
+}
+div.main div.second p.history{
+	width:71px;
+	color:#333;
+	font-size:13px;
+	line-height: 64px;
+	padding-left:62px;
+	cursor:pointer;
+	background: url("../images/history.png") no-repeat 18px 16.5px #fff;
+}
+div.main div.third{
+	color:#5a595e;
+	overflow: hidden;
+	margin-bottom:5px;
+}
+div.main div.third h2{
+	color:#333;
+	font-size:13px;
+	margin:22px 0 5px;
+}
+div.main div.third div{
+	height:70px;
+	width:200.5px;
+	background: #fff;
+	border:solid 1px #e7e7e7;
+	float:left;
+	margin-right:27px;
+	overflow: hidden;
+}
+div.main div.third div.yellow{
+	margin:0;
+}
+div.main div.third div hr{
+	height:70px;
+	width:4px;
+	border:none;
+	float:left;
+}
+div.main div.third div p{
+	width:36px;
+	float:left;
+	margin-left:9px;
+	margin-top:14px;
+}
+div.main div.third div p .deal{
+	font-size: 11px;
+	color:#b0b0b0;
+	margin-top:10px;
+	display: inline-block;
+}
+div.main div.third div .color{
+	margin-left:67px;
+	width:62px;
+	height:48px;
+	margin-top:11px;
+}
+div.main div.third div.green hr{
+	border-left:solid 4px #43b29f;
+}
+div.main div.third div.green .green{
+	background: #43b29f;
+}
+div.main div.third div.blue hr{
+	border-left:solid 4px #398ac1;
+}
+div.main div.third div.blue .blue{
+	background: #398ac1;
+}
+div.main div.third div.red hr{
+	border-left:solid 4px #cf4b36;
+}
+div.main div.third div.red .red{
+	background: #cf4b36;
+}
+div.main div.third div.yellow hr{
+	border-left:solid 4px #e1cd46;
+}
+div.main div.third div.yellow .yellow{
+	background: #e1cd46;
+}
+div.main div.box{
+	float:left;
+	margin:8px 8px 0 0;
+	border:solid 1px #e7e7e7;
+	border-radius:7px;
+	background: #fff;
+	height:357px;
+	box-sizing:border-box;
+}
+div.main div.box h2{
+	height:40px;
+	line-height:40px;
+	background: #f4f5f7;
+	text-indent: 22px;
+	font-size:13px;
+	border-bottom:solid 1px #e7e8ec;
+	border-radius:7px 7px 0 0;
+}
+div.main div.fourth, div.main div.board{
+	width:532px;
+}
+div.main div.fifth, div.main div.calender{
+	width:352px;
+}
+div.main div.fourth{
+	position: relative;
+}
+div.main div.fourth h3{
+	position: relative;
+	font-size:13px;
+	color:#616163;
+	margin-top:11px;
+	float:left;
+	width:82px;
+	height:30px;
+	margin-right:4px;
+	box-sizing:border-box;
+	background: #eeedf2;
+	text-align:center;
+	line-height: 28px;
+	cursor:pointer;
+}
+div.main div.fourth h3.left{
+	margin-left:22px;
+}
+div.main div.fourth div{
+	font-size:13px;
+	color:#616163;
+	position: absolute;
+	top:81px;
+	left:22px;
+	z-index:1;
+	background: #fff;
+	padding:27px 38.5px;
+	border:solid 1px #cbcbcb;
+	border-radius:0 3px 3px 3px;
+	display:none;
+}
+div.main div.fourth table{
+	border-collapse:collapse;
+	text-align:center;
+}
+div.main div.fourth table td{
+	width:101px;
+	height:30px;
+	border:solid 1px #cbcbcb;
+}
+div.main div.fourth table td.hasback{
+	background: #f4f5f7;
+}
+div.main div.fourth h3.up{
+	background: #fff;
+	border:solid 1px #cbcbcb;
+	border-bottom:none;
+	border-radius:3px 3px 0 0;
+	z-index: 999;
+}
+div.main div.fourth div.block{
+	display: block;
+}
+div.main div.fifth{
+	margin-right:0;
+	position: relative;
+}
+div.main div.fifth div{
+	padding:18px 35px;
+	font-size:13px;
+	text-indent:10px;
+}
+div.main div.fifth hr{
+	width:282px;
+	height:1px;
+	border:none;
+	border-top:solid 1px #b7b7b7;
+}
+div.main div.fifth hr.vertical{
+	position: absolute;
+	top:104px;
+	left:130px;
+	height:44px;
+	width:1px;
+	border-left:solid 1px #b7b7b7;
+}
+div.main div.fifth div h3{
+	font-weight:normal;
+	font-size:13px;
+	height:22px;
+}
+div.main div.fifth div p{
+	color:#545454;
+	height:22px;
+}
+div.main div.fifth div p.row1,div.main div.fifth div p.row2{
+	display: inline-block;
+	width:94px;
+}
+div.main div.fifth div p.row1{
+	color:#b7b7b7;
+}
+div.main div.fifth div hr.lasthr{
+	margin-top:90px;
+}
+div.main div.fifth div form{
+	overflow: hidden;
+	text-indent: 0;
+	padding-top:10px;
+}
+div.main div.fifth div form input{
+	vertical-align: middle;
+	margin:3px 0 0;
+	position:absolute;
+	width:15px;
+	height:15px;
+	clip:rect(1px 13px 13px 1px);
+}
+div.main div.fifth div form label{
+	margin-left:20px;
+}
+div.main div.fifth div form button{
+	float:right;
+}
+div.main div.calender div{
+	overflow: hidden;
+	padding:0 22px;
+	position: relative;
+}
+div.main div.calender select,div.main div.calender p{
+	display:inline-block;
+	float:left;
+	margin:10px 4px;
+	width:68.5px;
+}
+div.main div.calender select{
+	background:url("../images/select_down.png") no-repeat 90% 6px #fff;
+}
+#month{
+	width:55px;
+}
+#mark{
+	width:82px;
+}
+div.main div.calender p{
+	border:solid 1px #b7b7b7;
+	width:66.5px;
+	height:17px;
+	line-height: 17px;
+	text-align:center;
+	color:#000;
+	cursor:pointer;
+}
+div.main div.calender table{
+	clear:both;
+	color:#000;
+	border-top:solid 1px #a8cfec;
+}
+div.main div.calender hr{
+	position:absolute;
+	top:73px;
+	left:22px;
+	height:1px;
+	width:303px;
+	border:none;
+	border-top:solid 1px #e7e7e7;
+}
+div.main div.calender table th{
+	height:30px;
+	width:39px;
+	font-weight:normal;
+}
+div.main div.calender table td{
+	width:39px;
+	height:39px;
+	border:solid 1px transparent;
+	text-align:center;
+}
+div.main div.calender table td span{
+	display: block;
+}
+div.main div.calender table span.festival{
+	color:#c8171d;
+}
+div.main div.calender table td+td+td+td+td+td span:first-child{
+	color:#c8171d;
+}
+div.main div.calender table td.today{
+	border-color:#f6d564;
+}
+div.main div.calender table td:hover{
+	border-color:#f6d564;
+}
+div.main div.board{
+	margin-right:0;
+}
+div.main div.board table{
+	color:#000;
+	margin:15px auto 0;
+	border-collapse:collapse;
+}
+div.main div.board table th:first-child,div.main div.board table td:first-child{
+	width:68px;
+	text-align:center;
+}
+div.main div.board table th:first-child+th,div.main div.board table td:first-child+td{
+	width:90px;
+	text-align:center;
+}
+div.main div.board table th+th+th,div.main div.board table td+td+td{
+	width:290px;
+	text-indent: 2em;
+	text-align:left;
+}
+div.main div.board table th,div.main div.board table td{
+	height:25px;
+	border:solid 1px #e7e7e7;
+	border-bottom:none;
+}
+div.main div.board table td  p,div.main div.board table td hr{
+	display: inline-block;
+	text-indent: 0;
+}
+div.main div.board table td  p{
+	margin-right:10px;
+}	
+div.main div.board table td hr{
+	height:4px;
+	border:none;
+	border-top:solid 4px #e7e7e7;
+}
+div.main div.board table td hr.firstbegin{
+	width:142px;
+	border-color:#ed6d52;
+}
+div.main div.board table td hr.firstend{
+	width:26px;
+}
+div.main div.board table td hr.secondbegin{
+	width:123px;
+	border-color:#ef8150;
+}
+div.main div.board table td hr.secondend{
+	width:45px;
+}
+div.main div.board table td hr.thirdbegin{
+	width:106px;
+	border-color:#f19e4e;
+}
+div.main div.board table td hr.thirdend{
+	width:62px;
+}
+div.main div.board table td hr.fourthbegin{
+	width:96px;
+	border-color:#7ec9f0;
+}
+div.main div.board table td hr.fourthend{
+	width:72px;
+}
+div.main div.board table td hr.fifthbegin{
+	width:87px;
+	border-color:#7fcaf1;
+}
+div.main div.board table td hr.fifthend{
+	width:81px;
+}
+div.main div.board table td hr.sixthbegin{
+	width:80px;
+	border-color:#7fcbef;
+}
+div.main div.board table td hr.sixthend{
+	width:88px;
+}
+div.main div.board table td hr.seventhbegin{
+	width:75px;
+	border-color:#7fcbef;
+}
+div.main div.board table td hr.seventhend{
+	width:93px;
+}
+div.main div.board table td hr.eighthbegin{
+	width:65px;
+	border-color:#7fcbef;
+}
+div.main div.board table td hr.eighthend{
+	width:103px;
+}
+div.main div.board table td hr.ninthbegin{
+	width:60px;
+	border-color:#7fcbef;
+}
+div.main div.board table td hr.ninthend{
+	width:108px;
+}
+div.main div.board table td hr.tenthbegin{
+	width:55px;
+	border-color:#7fcbef;
+}
+div.main div.board table td hr.tenthend{
+	width:113px;
+}
+div.main div.board table tbody tr:hover{
+	background: #f4f5f7;
+	cursor: pointer;
+}
