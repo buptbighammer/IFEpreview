@@ -540,9 +540,6 @@ div.main div.fifth div form input{
 	vertical-align: middle;
 	margin:3px 0 0;
 	position:absolute;
-	width:15px;
-	height:15px;
-	clip:rect(1px 13px 13px 1px);
 }
 div.main div.fifth div form label{
 	margin-left:20px;
