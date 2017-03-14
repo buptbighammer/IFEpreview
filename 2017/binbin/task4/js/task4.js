@@ -1,36 +1,49 @@
+function getInputValue(){
+	var input = document.getElementsByTagName("input")[0].value;
+	if(isNaN(input)){
+		alert("Please input a number!");
+	}
+	else{
+		return input;
+	}
+}
+function createNewDiv(input){
+	var divElem = document.createElement("div");
+	divElem.appendChild(document.createTextNode(input));
+	return divElem;
+}
+function addDivEvent(){
+	document.body.removeChild(this);
+}
 function addButtonClick(){
-	document.getElementsByClassName("leftin")[0].onclick = function(event){
-		event.preventDefault();
-		var input = parseInt(document.getElementsByTagName("input")[0].value);
-		if(typeof input === "number" && !isNaN(input)){
-			var arrDiv = document.getElementsByTagName("div");
-			var divElem = document.createElement("div");
-			divElem.appendChild(document.createTextNode(input));
+	//左侧入绑定事件
+	document.getElementsByClassName("leftin")[0].onclick = function(){
+		input = getInputValue();
+		if(input){
+		var arrDiv = document.getElementsByTagName("div");
+		var divElem = createNewDiv(input);
 			if(arrDiv.length){
 				document.body.insertBefore(divElem, arrDiv[0]);
 			}
 			else{
 				document.body.appendChild(divElem);
 			}
-			divElem.onclick = function(){
-				document.body.removeChild(this);
-			}
+			divElem.onclick = addDivEvent;
 		}
+		document.getElementsByTagName("input")[0].value = "";
 	};
-	document.getElementsByClassName("rightin")[0].onclick = function(event){
-		event.preventDefault();
-		var input = parseInt(document.getElementsByTagName("input")[0].value);
-		if(typeof input === "number" && !isNaN(input)){
-			var divElem = document.createElement("div");
-			divElem.appendChild(document.createTextNode(input));
+	//右侧入绑定事件
+	document.getElementsByClassName("rightin")[0].onclick = function(){
+		var input = getInputValue();
+		if(input){
+			var divElem = createNewDiv(input);
 			document.body.appendChild(divElem);
-			divElem.onclick = function(){
-				document.body.removeChild(this);
-			}
+			divElem.onclick = addDivEvent;
 		}
+		document.getElementsByTagName("input")[0].value = "";
 	};
-	document.getElementsByClassName("leftout")[0].onclick = function(event){
-		event.preventDefault();
+	//左侧出绑定事件
+	document.getElementsByClassName("leftout")[0].onclick = function(){
 		var arrDiv = document.getElementsByTagName("div");
 		if(arrDiv.length){
 			var value = arrDiv[0].innerHTML;
@@ -38,8 +51,8 @@ function addButtonClick(){
 			alert(value);
 		}
 	};
-	document.getElementsByClassName("rightout")[0].onclick = function(event){
-		event.preventDefault();
+	//右侧出绑定事件
+	document.getElementsByClassName("rightout")[0].onclick = function(){
 		var arrDiv = document.getElementsByTagName("div");
 		if(arrDiv.length){
 			var value = arrDiv[arrDiv.length - 1].innerHTML;
