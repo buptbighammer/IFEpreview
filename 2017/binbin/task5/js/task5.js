@@ -89,19 +89,9 @@ function addButtonClick(){
 
 						return function()
 						{
-							divChildren[j].style.background = "green";
-							divChildren[j+1].style.background = "green";
 							sortBubble(divChildren[j], divChildren[j+1]);
-							divChildren[j].style.background = "blue";
-							divChildren[j+1].style.background = "blue";
-							if(j == len-2-i){
-								divChildren[len-1-i].style.background = "red";
-							}
-							if(j==0 && i==len-2){
-								divChildren[0].style.background = "red";
-							}
 						}
-					}(i,j),((i+1)*10+j)*200);
+					}(i,j),((i+1)*10+j)*50);
 			}
 		}
 	};
