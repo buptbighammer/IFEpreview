@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin-task8</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		font-size:0;
+	}
+	div{
+		border:solid 1px #000;
+		display: inline-block;
+		margin:5px;
+		padding:5px;
+		font-size:14px;
+		background: #fff;
+	}
+	div.level4{
+		height:40px;
+		line-height: 28px;
+	}
+	div.level3{
+		height:62px;
+		line-height: 50px;
+	}
+	div.level2{
+		height:84px;
+		line-height: 72px;
+	}
+	div.level1{
+		height:106px;
+		line-height: 94px;
+	}
+	div.root{
+		height:128px;
+		line-height: 116px;
+	}
+	button,input{
+		font-size:14px;
+		margin:15px;
+		padding:0 3px;
+	}
+	</style>
+</head>
+<body>
+	<div class="root">Super
+		<div class="level1">Cat
+			<div class="level2">Apple
+				<div class="level3">Poor</div>
+				<div class="level3">Pig</div>
+				<div class="level3">Dog</div>
+				<div class="level3">Soccor</div>
+			</div>
+			<div class="level2">Phone</div>
+			<div class="level2">
+				<div class="level3">Book</div>
+				<div class="level3">School</div>
+			</div>
+		</div>
+		<div class="level1">Node
+			<div class="level2">Human
+				<div class="level3">Code</div>
+				<div class="level3">Operator</div>
+				<div class="level3">Man</div>
+			</div>
+			<div class="level2">Program
+				<div class="level3">Movment
+					<div class="level4">Shop</div>
+				</div>
+				<div class="level3">Glass</div>
+			</div>
+		</div>
+		<div class="level1">Fish</div>
+	</div>
+	<section>
+		<button id="deepFirst">深度优先遍历</button>
+		<button id="breadthFirst">广度优先遍历</button>
+		<input type="text" placeholder="请输入要查找的单词">
+		<button id="searchDF">深度优先查找</button>
+		<button id="searchBF">广度优先查找</button>
+	</section>
+	<script src="../../js/eventutil.js"></script>
+	<script src="task8.js"></script>
+</body>
+</html>
