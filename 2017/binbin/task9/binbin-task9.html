@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>binbin-task9</title>
+	<style>
+	*{
+		margin:0;
+		padding:0;
+		box-sizing:border-box;
+		font-size:0;
+	}
+	div{
+		border:solid 1px #000;
+		display: inline-block;
+		margin:5px;
+		padding:5px;
+		font-size:14px;
+		color:#000;
+		background: #fff;
+		cursor:pointer;
+	}
+	button,input{
+		font-size:14px;
+		margin:15px;
+		padding:3px 5px;
+	}
+	button{
+		background: #3388ff;
+		color:#fff;
+		border-radius:3px;
+		border:none;
+	}
+	div.select{
+		color:#fff;
+		background-color:#27d053;
+	}
+	div.found{
+		color:#fff;
+		background-color:#ff5776;
+	}
+	div.click{
+		color:#fff;
+		background-color:#ff9800;
+	}
+	</style>
+</head>
+<body>
+	<section>
+		<button id="deepFirst">深度优先遍历</button>
+		<button id="breadthFirst">广度优先遍历</button>
+		<input id="findValue" type="text" placeholder="请输入要查找的单词">
+		<button id="searchDF">深度优先查找</button>
+		<button id="searchBF">广度优先查找</button>
+		<button id="delete">删除元素</button>
+		<input id="addValue" type="text" placeholder="请输入要添加的元素">
+		<button id="add">添加元素</button>
+	</section>
+	<div>Super
+		<div>Cat
+			<div>Apple
+				<div>Poor</div>
+				<div>Pig</div>
+				<div>Dog</div>
+				<div>Soccor</div>
+			</div>
+			<div>Phone</div>
+			<div>
+				<div>Book</div>
+				<div>School</div>
+			</div>
+		</div>
+		<div>Node
+			<div>Human
+				<div>Code</div>
+				<div>Operator</div>
+				<div>Man</div>
+			</div>
+			<div>Program
+				<div>Movment
+					<div>Shop</div>
+				</div>
+				<div>Glass</div>
+			</div>
+		</div>
+		<div>Fish</div>
+	</div>
+	<script src="../../js/eventutil.js"></script>
+	<script src="task9.js"></script>
+</body>
+</html>
