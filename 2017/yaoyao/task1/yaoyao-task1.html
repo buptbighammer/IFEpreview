@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>yaoyao-task1</title>
+	<style>
+		form{
+			font-size:23px;
+		}
+		#name{
+			width:400px;
+			height:50px;
+			border:solid 2px #ccc;
+			margin-left:20px;
+			font-size:23px;
+			border-radius:5px;
+		}
+		#button{
+			color:#fff;
+			background-color:#2f79ba;
+			border-radius:5px;
+			padding:10px 15px;
+			border:none;
+			margin-left:10px;
+			font-size:23px;
+		}
+		.required{
+			color:#ccc;
+		}
+		.empty{
+			color:#dd0011;
+			display:none;
+		}
+		.format{
+			color:#60ba49;
+			display:none;
+		}
+		.error-format{
+			color:#ff9800;
+			display:none;
+		}
+		p{
+			margin-left:75px;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<label for="name">名称</label>
+		<input type="text" id="name">
+		<input type="submit" id="button" value="验证">
+		<p class="required">必填，长度为4~16个字符</p>
+		<p class="empty">姓名不能为空</p>
+		<p class="error-format">名称只能为英文字母、数字、英文符号、汉字，长度为4~16个字符</p>
+		<p class="format">名称格式正确</p>
+	</form>
+	<script src="../../js/eventutil.js"></script>
+	<script src="task1.js"></script>
+</body>
+</html>
