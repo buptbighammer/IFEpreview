@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>yaoyao-task2</title>
+	<style>
+	*{
+		padding:0;
+		margin:0;
+		font-size:16px;
+	}
+	div{
+		padding:10px;
+	}
+	label{
+		display:inline-block;
+		width:100px;
+		text-align:right;
+		font-weight:bold;
+	}
+	input{
+		width:295px;
+		height:30px;
+		line-height:30px;
+		padding-left:5px;
+		border:solid 1px #ccc;
+		border-radius:5px;
+		font-size:16px;
+	}
+	p{
+		margin-left:105px;
+		font-size:14px;
+		margin-top:5px;
+	}
+	form{
+		position:relative;
+		width:430px;
+	}
+	#commit{
+		width:55px;
+		height:30px;
+		line-height:30px;
+		color:#fff;
+		background-color:#2f79ba;
+		border:none;
+		position:absolute;
+		right:15px;
+		margin-top:10px;
+	}
+	</style>
+</head>
+<body>
+	<form action="" method="post" name="registered">
+		<div>
+			<label for="name">名称</label>
+			<input type="text" id="name">
+			<p></p>
+		</div>
+		<div>
+			<label for="pwd">密码</label>
+			<input type="password" id="pwd">
+			<p></p>
+		</div>
+		<div>
+			<label for="repeat-pwd">密码确认</label>
+			<input type="password" id="repeat-pwd">
+			<p></p>
+		</div>
+		<div>
+			<label for="email">邮箱</label>
+			<input type="email" id="email">
+			<p></p>
+		</div>
+		<div>
+			<label for="tel">手机</label>
+			<input type="text" id="tel">
+			<p></p>
+		</div>
+		<input type="submit" id="commit" value="提交">
+	</form>
+	<script type="text/javascript" src="../../js/eventutil.js"></script>
+	<script type="text/javascript" src="task2.js"></script>
+</body>
+</html>
