@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>yaoyao-task3</title>
+	<style>
+	body *{
+		padding:0;
+		margin:0;
+	}
+	form{
+		padding:10px;
+		font-size:16px;
+	}
+	form div{
+		width:520px;
+	}
+	form div label{
+		display: inline-block;
+		width:250px;
+		padding:5px;
+	}
+	#select label{
+		margin-left:45px;
+		width:200px;
+	}
+	select{
+		width:200px;
+		margin-left:5px;
+		font-size:16px;
+		height:30px;
+		line-height:30px;
+		border:solid 1px #ccc;
+		border-radius:5px;
+	}
+	#forsocial label{
+		width:300px;
+	}
+	#forsocial input{
+		width:200px;
+		margin-left:5px;
+		font-size:16px;
+		height:30px;
+		line-height:30px;
+		border:solid 1px #ccc;
+		border-radius:5px;
+		text-indent:5px;
+	}
+	#shanghai, #tianjin, #forsocial{
+		display:none;
+	}
+	#beijing, #shanghai, #tianjin{
+		float:right;
+	}
+	</style>
+</head>
+<body>
+	<form action="">
+		<div id="select">
+			<label for="student"><input type="radio" name="source" id="student" checked>在校生</label>
+			<label for="social"><input type="radio" name="source" id="social">非在校生</label>
+		</div>
+		<div id="forstudent">
+			<label for="city">城市
+				<select name="where" id="city">
+					<option value="BJS">北京</option>
+					<option value="SHA">上海</option>
+					<option value="TJ">天津</option>
+				</select>
+			</label>
+			<label for="BJS" id="beijing">学校
+				<select name="school" id="BJS">
+					<option value="BUPT">北京邮电大学</option>
+					<option value="PKU">北京大学</option>
+					<option value="TSU">清华大学</option>
+				</select>
+			</label>
+			<label for="SHA" id="shanghai">学校
+				<select name="school" id="SHA">
+					<option value="SJTU">上海交通大学</option>
+					<option value="FUDAN">复旦大学</option>
+					<option value="TJUSHA">同济大学</option>
+				</select>
+			</label>
+			<label for="BJS" id="tianjin">学校
+				<select name="school" id="TJ">
+					<option value="TJU">天津大学</option>
+					<option value="NKU">南开大学</option>
+				</select>
+			</label>
+		</div>
+		<div id="forsocial">
+			<label for="employ">就业单位<input type="text" id="employ"></label>
+		</div>
+	</form>
+	<script type="text/javascript" src="../../js/eventutil.js"></script>
+	<script type="text/javascript" src="task3.js"></script>
+</body>
+</html>
