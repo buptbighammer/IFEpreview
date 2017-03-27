@@ -1,5 +1,6 @@
 var direction = ["top", "left", "bottom", "right"];
 addEvent();
+//添加点击事件
 function addEvent(){
 	EventUtil.addHandler(document.forms["move"], "submit", blockMove);
 }
@@ -16,6 +17,7 @@ function blockMove(){
 		tunBac();
 	}
 }
+//移动
 function go(){
 	var moveBlock = document.getElementById("move-block");
 	if(moveBlock.firstElementChild.className === direction[0]){
@@ -62,6 +64,7 @@ function move(moveBlock, nextNode){
 	moveBlock.innerHTML = "";
 	moveBlock.id = "";
 }
+//左转
 function tunLef(){
 	var block = document.getElementById("move-block").firstElementChild;
 	switch(block.className){
@@ -79,6 +82,7 @@ function tunLef(){
 		break;
 	}
 }
+//右转
 function tunRig(){
 	var block = document.getElementById("move-block").firstElementChild;
 	switch(block.className){
@@ -96,6 +100,7 @@ function tunRig(){
 		break;
 	}
 }
+//180度
 function tunBac(){
 	var block = document.getElementById("move-block").firstElementChild;
 	switch(block.className){
@@ -113,3 +118,6 @@ function tunBac(){
 		break;
 	}
 }
+//其他思路：
+//将红蓝块截为图片，移动图片，转动transform:rotate（CSS3）
+//将三种方向存为数组，块状元素的className为数组内index+1
