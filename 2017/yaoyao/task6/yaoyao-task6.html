@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>yaoyao-task6</title>
+	<style>
+	*{
+		padding:0;
+		margin:0;
+	}
+	#bottom{
+		width:50px;
+		height:30px;
+		line-height: 30px;
+		font-size: 16px;
+		margin:20px auto;
+		background: #dea;
+		border-radius:5px;
+		cursor:default;
+		text-align: center;
+	}
+	#layout{
+		background: #fff;
+		overflow: hidden;
+		width:300px;
+		height:200px;
+		border:solid 2px orange;
+		border-radius:10px;
+	}
+	#layout h2{
+		height:40px;
+		line-height: 40px;
+		background: lightgreen;
+		padding:5px;
+		color:#fff;
+		border-bottom:solid 2px orange;
+	}
+	#layout p{
+		padding:5px;
+	}
+	#layout form{
+		position:absolute;
+		bottom:10px;
+		right:10px;
+	}
+	#layout input{
+		width:50px;
+		height:30px;
+		font-size:16px;
+		border:solid 2px pink;
+		border-radius:5px;
+		margin-right:10px;
+		background: #aef;
+	}
+	#layout input:first-child{
+		border-color:#8da;
+		background: #93a;
+	}
+	</style>
+</head>
+<body class="mask">
+	<div id="bottom">login</div>
+	<div id="layout">
+		<h2>这是一个浮出层</h2>
+		<p>这是一个浮出层</p>
+		<form action="">
+			<input type="submit" value="确定"><input type="submit" value="取消">
+		</form>
+	</div>
+	<script src="../../js/eventutil.js"></script>
+	<script src="js/public.js"></script>
+	<script src="js/task6.js"></script>
+</body>
+</html>
