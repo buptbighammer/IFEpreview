@@ -68,6 +68,7 @@ layOutMask.prototype = {
 		this.maskElem.style.display = "block";
 	},
 	hide:function(){
+		EventUtil.preventDefault(event);
 		this.layoutElem.style.display = "none";
 		this.maskElem.style.display = "none";
 	}
