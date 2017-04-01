@@ -1,5 +1,6 @@
 function createTable(){
 	this.table = document.createElement("table");
+	this.theads = null;
 	this.tbody = null;
 	this.sort = [];
 	this.init();
@@ -16,6 +17,7 @@ createTable.prototype = {
 		inner += "</th></tr></thead>";
 		this.sort.length = head.length;
 		this.table.innerHTML = inner + this.table.innerHTML;
+		this.theads = this.table.firstElementChild.firstElementChild.childNodes;
 	},
 	addRows:function(rows){
 		var inner = "";
@@ -27,38 +29,29 @@ createTable.prototype = {
 		this.table.lastElementChild.innerHTML += inner;
 		this.tbody = this.table.lastElementChild;
 		var k = 1;
-		for(var i = 0; i<this.tbody.childNodes.length; i++){
-			if(this.tbody.childNodes[i].nodeType === 1){
-				this.tbody.childNodes[i].style.top = k*31 +"px";
-				k++;
-			}
+		for(var i = 0; i<this.tbody.children.length; i++){
+			this.tbody.children[i].style.top = k*31 +"px";
+			k++;
 		}
 	},
 	sortTable:function(n){
 		var tdOrder = [];
 		var j = 0;
-		for(var i = 0; i < this.tbody.childNodes.length; i++){
-			if(this.tbody.childNodes[i].nodeName.toLowerCase() === "tr"){
+		for(var i = 0; i < this.tbody.children.length; i++){
 				var m = 0;
-				var trChild = this.tbody.childNodes[i].childNodes;
+				var trChild = this.tbody.children[i].children;
 				for(var k = 0; k<trChild.length; k++){
-					if(trChild[k].nodeType === 1){
-						if(m === n){
-							tdOrder.push([j, parseInt(trChild[k].innerHTML)]);
-							j++;
-						}
-						m++;
+					if(m === n){
+						tdOrder.push([j, parseInt(trChild[k].innerHTML)]);
+						j++;
 					}
-				}
+					m++;
 			}
 		}
 		var self = this;
 		if(self.sort[n] === 1){
 			tdOrder.sort(function(a,b){
-				var anum = a[1];
-				var bnum = b[1];
-			
-				return anum - bnum;
+				return a[1] - b[1];
 			});
 			for(var l = 0; l<self.sort.length; l++){
 				self.sort[l] = 0;
@@ -66,9 +59,7 @@ createTable.prototype = {
 			self.sort[n] = -1;
 		}else{
 			tdOrder.sort(function(a,b){
-				var anum = a[1];
-				var bnum = b[1];
-				return bnum - anum;
+				return b[1] - a[1];
 			});
 			for(var l = 0; l<self.sort.length; l++){
 					self.sort[l] = 0;
@@ -77,17 +68,14 @@ createTable.prototype = {
 		}
 		var k = 1;
 		for(var i = 0; i<tdOrder.length; i++){
-			var indexAndValue = tdOrder[i];
 			var m = 0;
-			for(j = 0; j<this.tbody.childNodes.length; j++){
-				if(this.tbody.childNodes[j].nodeType === 1){
-					if(m === indexAndValue[0]){
-						this.tbody.childNodes[j].style.top = k*31 + "px";
-						k++;
-						break;
-					}
-					m++;
+			for(j = 0; j<this.tbody.children.length; j++){
+				if(m === tdOrder[i][0]){
+					this.tbody.children[j].style.top = k*31 + "px";
+					k++;
+					break;
 				}
+				m++;
 			}
 		}
 	}

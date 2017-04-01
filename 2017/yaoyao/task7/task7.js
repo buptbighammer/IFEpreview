@@ -4,17 +4,15 @@ function getTable(){
 	tableElem.addRows([["小明", "80", "90", "70", "240"],
 	 ["小红", "90", "60", "90", "240"], 
 	 ["小亮", "60", "100", "70", "230"]]);
-	var thead = tableElem.table.firstElementChild;
 	var n = 0;
-	var tth = thead.firstElementChild;
-	for(var i = 0; i<tth.childNodes.length; i++){
-		if(tth.childNodes[i].nodeType === 1){
+	for(var i = 0; i<tableElem.theads.length; i++){
+		if(tableElem.theads[i].nodeType === 1){
 			if(n > 0){
-				EventUtil.addHandler(tth.childNodes[i], "click", (function(n){
+				EventUtil.addHandler(tableElem.theads[i], "click", (function(i){
 					return function(){
-						tableElem.sortTable(n);
+						tableElem.sortTable(i);
 					}
-				})(n));
+				})(i));
 			}
 			n++;
 		}
