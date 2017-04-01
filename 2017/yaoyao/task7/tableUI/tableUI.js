@@ -6,7 +6,7 @@ function createTable(){
 }
 createTable.prototype = {
 	init:function(){
-		document.body.appendChild(this.table);
+		document.body.insertBefore(this.table, document.body.firstChild);
 		this.table.innerHTML = "<tbody></tbody>";
 		this.tbody = this.table.firstElementChild;
 	},
