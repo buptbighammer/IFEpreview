@@ -16,6 +16,7 @@ th{
 	background: #000;
 	color:#fff;
 	position:relative;
+	cursor: default;
 }
 th div{
 	display:inline-block;
