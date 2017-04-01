@@ -1,0 +1,40 @@
+table *{
+	padding:0;
+	margin:0;
+}
+table{
+	border-collapse:collapse;
+	position:relative;	
+}
+td, th{
+	border:solid 1px pink;
+	width:80px;
+	height:30px;
+	text-align:center;
+}
+th{
+	background: #000;
+	color:#fff;
+	position:relative;
+}
+th div{
+	display:inline-block;
+	width:0;
+	height:0;
+	position:absolute;
+	left:65px;
+	border:none;
+	border-left:solid 5px transparent;
+	border-right:solid 5px transparent;
+}
+th .top{
+	border-bottom:solid 5px orange;
+	top:7px;
+}
+th .bottom{
+	border-top:solid 5px orange;
+	top:18px;
+}
+tbody tr{
+	position:absolute;
+}

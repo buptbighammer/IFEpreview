@@ -24,11 +24,11 @@ layOutMask.prototype = {
 				node.parentNode.style.left = x + "px";
 				node.parentNode.style.top = y + "px";
 			};
-			EventUtil.addHandler(document, "mousemove", move);
-			EventUtil.addHandler(document, "mouseup", function(event) {
+			EventUtil.addHandler(node, "mousemove", move);
+			EventUtil.addHandler(node, "mouseup", function(event) {
 				EventUtil.stopPropagation(event);
 				EventUtil.preventDefault(event);
-				EventUtil.removeHandler(document, "mousemove", move);
+				EventUtil.removeHandler(node, "mousemove", move);
 			});
 
 		});
@@ -55,7 +55,7 @@ layOutMask.prototype = {
 		EventUtil.addHandler(this.maskElem, "click", function() {
 			EventUtil.preventDefault(event);
 			this.style.display = "none";
-			this.previousElementSibling.style.display = "none";
+			this.nextElementSibling.style.display = "none";
 		});
 		EventUtil.addHandler(this.layoutElem, "click", function(event) {
 			EventUtil.stopPropagation(event);
