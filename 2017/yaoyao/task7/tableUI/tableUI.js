@@ -2,20 +2,17 @@ function createTable(){
 	this.table = document.createElement("table");
 	this.theads = null;
 	this.tbody = null;
-	this.sort = [];
 	this.init();
 }
 createTable.prototype = {
 	init:function(){
 		document.body.insertBefore(this.table, document.body.firstChild);
 		this.table.innerHTML = "<tbody></tbody>";
-		this.tbody = this.table.firstElementChild;
 	},
 	addTableHead:function(head){
 		var inner = "<thead><tr><th>";
 		inner += head.join("</th><th><div class='top'></div><div class='bottom'></div>");
 		inner += "</th></tr></thead>";
-		this.sort.length = head.length;
 		this.table.innerHTML = inner + this.table.innerHTML;
 		this.theads = this.table.firstElementChild.firstElementChild.childNodes;
 	},
@@ -33,29 +30,20 @@ createTable.prototype = {
 			tobdyTr[i].style.top = (i+1)*31 +"px";
 		}
 	},
-	sortTable:function(n){
+	sortTable:function(n, order){
 		var tdOrder = [];
 		var tobdyTr = this.tbody.getElementsByTagName("tr");
 		for(var i = 0; i < tobdyTr.length; i++){
 			tdOrder.push([i, parseInt(tobdyTr[i].getElementsByTagName("td")[n].innerHTML)]);
 		}
-		var self = this;
-		if(self.sort[n] === 1){
+		if(order === "up"){
 			tdOrder.sort(function(a,b){
 				return a[1] - b[1];
 			});
-			for(var l = 0; l<self.sort.length; l++){
-				self.sort[l] = 0;
-			}
-			self.sort[n] = -1;
 		}else{
 			tdOrder.sort(function(a,b){
 				return b[1] - a[1];
 			});
-			for(var l = 0; l<self.sort.length; l++){
-					self.sort[l] = 0;
-			}
-			self.sort[n] = 1;
 		}
 		var k = 1;
 		for(var i = 0; i<tdOrder.length; i++){

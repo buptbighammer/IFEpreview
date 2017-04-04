@@ -8,9 +8,14 @@ function getTable(){
 	for(var i = 0; i<tableElem.theads.length; i++){
 		if(tableElem.theads[i].nodeType === 1){
 			if(n > 0){
-				EventUtil.addHandler(tableElem.theads[i], "click", (function(i){
+				EventUtil.addHandler(tableElem.theads[i].firstElementChild, "click", (function(i){
 					return function(){
-						tableElem.sortTable(i);
+						tableElem.sortTable(i, "up");
+					}
+				})(i));
+				EventUtil.addHandler(tableElem.theads[i].lastElementChild, "click", (function(i){
+					return function(){
+						tableElem.sortTable(i, "down");
 					}
 				})(i));
 			}
