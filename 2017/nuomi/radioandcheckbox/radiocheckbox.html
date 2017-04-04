@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>radio-and-checkbox</title>
+	<style>
+	body *{
+		padding:0;
+		margin:0;
+	}
+	div{
+		margin-bottom:10px;
+	}
+	input{
+		display: none;
+	}
+	label{
+		position:relative;
+		display: inline-block;
+		height:20px;
+		width:60px;
+		text-indent:25px;
+	}
+	label::before{
+		position:absolute;
+		width:20px;
+		height:20px;
+		top:0;
+		left:0;
+		border:solid 1px #ccc;
+		content:"";
+		display: inline-block;
+		box-sizing:border-box;
+	}
+	label[for="radio"]::before{
+		border-radius:50%;
+	}
+	input:checked+label::before{
+		border-color:#d83c30;
+		color:#d83c30;
+		text-align:center;
+		text-indent:0;
+	}
+	input[type="radio"]:checked+label::before{
+		content:"\2022";
+		line-height: 14px;
+		font-size:35px;
+	}
+	input[type="checkbox"]:checked+label::before{
+		content:"\2714";
+		line-height: 18px;
+		font-size:15px;
+	}
+	</style>
+</head>
+<body>
+	<div>
+		<input type="radio" id="radio">
+		<label for="radio">单选</label>
+	</div>
+	<div>
+		<input type="checkbox" id="checkbox">
+		<label for="checkbox">复选</label>
+	</div>
+</body>
+</html>
