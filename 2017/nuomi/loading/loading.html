@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>loading</title>
+	<style>
+	.three-quarters{
+		width:40px;
+		height:40px;
+		padding:10px;
+		background:#ea61a6;
+		background-clip:content-box;
+		border:solid 3px #f70774;
+		border-radius:50%;
+		border-bottom-color:transparent;
+		position:fixed;
+		top:50%;
+		left:50%;
+		transform:translate(-50%,-50%);
+		-webkit-animation: three 1s infinite linear;
+	}
+	.wrap{
+		width:20px;
+		height:40px;
+		position:absolute;
+		top:10px;
+		left:10px;
+		overflow: hidden;
+	}.wrap2{
+		left:30px;
+	}
+	.half{
+		box-sizing:border-box;
+		width:20px;
+		height:40px;
+		border-radius:50%;
+		transform:rotate(-45deg);
+	}
+	.half1{
+		border-top:solid 20px #f70774;
+		border-left:solid 20px #f70774;
+		border-bottom:solid 20px transparent;
+		border-right:solid 20px transparent;
+		-webkit-animation: half1 1s infinite linear;
+	}
+	.half2{
+		position:absolute;
+		left:-20px;
+		border-top:solid 20px transparent;
+		border-left:solid 20px transparent;
+		border-bottom:solid 20px #f70774;
+		border-right:solid 20px #f70774;
+		-webkit-animation: half2 1s infinite linear;
+	}
+	@-webkit-keyframes half1{
+		0%{
+			transform:rotate(-45deg);
+		}
+		50%,100%{
+			transform:rotate(135deg);
+		}
+	}
+	@-webkit-keyframes half2{
+		0%,50%{
+			transform:rotate(-45deg);
+		}
+		100%{
+			transform:rotate(135deg);
+		}
+	}
+	@-webkit-keyframes three{
+		from{
+			transform:rotate(0deg);
+		}
+		to{
+			transform:rotate(360deg);
+		}
+	}
+	</style>
+</head>
+<body>
+	<div class="three-quarters">
+		<div class="wrap warp1"><div class="half half1"></div></div>
+		<div class="wrap wrap2"><div class="half half2"></div></div>
+	</div>
+</body>
+</html>

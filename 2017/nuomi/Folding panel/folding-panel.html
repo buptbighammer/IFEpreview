@@ -19,18 +19,17 @@
 		text-decoration:underline;
 	}
 	.panel-body{
-		visibility:hidden;
+		overflow: hidden;
 		height:0;
-		transition:background 1s linear;
-		transition:height 1s linear;
-		margin-bottom:5px;
+		transition:height .5s;
+		margin-bottom:1px;
+		background: #aed;
 	}
 	input[type="radio"]:checked+label+div{
-		visibility:visible;
 		height:84px;
 		border:solid 1px #aed;
 		border-top:none;
-		background: rgba(123,234,213,0.7);
+		background: rgba(123,234,213,1);
 		padding:5px 10px;
 	}
 	</style>
