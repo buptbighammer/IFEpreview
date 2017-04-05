@@ -13,22 +13,25 @@
 		font-size:22px;
 		background: #eca;
 		border:solid 1px #aed;
-		margin-bottom:2px;
 		cursor:default;
+	}
+	label:hover{
+		text-decoration:underline;
 	}
 	.panel-body{
 		visibility:hidden;
 		height:0;
 		transition:background 1s linear;
 		transition:height 1s linear;
+		margin-bottom:5px;
 	}
 	input[type="radio"]:checked+label+div{
 		visibility:visible;
 		height:84px;
-		border:solid 1px #9a9;
+		border:solid 1px #aed;
+		border-top:none;
 		background: rgba(123,234,213,0.7);
 		padding:5px 10px;
-		margin-bottom:2px;
 	}
 	</style>
 </head>
