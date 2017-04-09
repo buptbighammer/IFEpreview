@@ -4,6 +4,11 @@
 	<meta charset="UTF-8">
 	<title>loading</title>
 	<style>
+	*{
+		padding:0;
+		margin:0;
+		font-size:0;
+	}
 	.three-quarters{
 		width:40px;
 		height:40px;
@@ -16,8 +21,12 @@
 		position:fixed;
 		top:50%;
 		left:50%;
-		transform:translate(-50%,-50%);
+		margin-top:-33px;
+		margin-left:-33px;
+		animation: three 1s infinite linear;
 		-webkit-animation: three 1s infinite linear;
+		-moz-animation: three 1s infinite linear;
+		-o-animation: three 1s infinite linear;
 	}
 	.wrap{
 		width:20px;
@@ -41,7 +50,10 @@
 		border-left:solid 20px #f70774;
 		border-bottom:solid 20px transparent;
 		border-right:solid 20px transparent;
-		-webkit-animation: half1 1s infinite linear;
+		animation: half1 2s infinite linear;
+		-webkit-animation: half1 2s infinite linear;
+		-moz-animation: half1 2s infinite linear;
+		-o-animation: half1 2s infinite linear;
 	}
 	.half2{
 		position:absolute;
@@ -50,22 +62,31 @@
 		border-left:solid 20px transparent;
 		border-bottom:solid 20px #f70774;
 		border-right:solid 20px #f70774;
-		-webkit-animation: half2 1s infinite linear;
+		animation: half2 2s infinite linear;
+		-webkit-animation: half2 2s infinite linear;
+		-moz-animation: half1 2s infinite linear;
+		-o-animation: half2 2s infinite linear;
 	}
 	@-webkit-keyframes half1{
 		0%{
 			transform:rotate(-45deg);
 		}
-		50%,100%{
+		25%,50%{
 			transform:rotate(135deg);
+		}
+		75%,100%{
+			transform:rotate(315deg);
 		}
 	}
 	@-webkit-keyframes half2{
-		0%,50%{
+		0%,25%{
 			transform:rotate(-45deg);
 		}
-		100%{
+		50%,75%{
 			transform:rotate(135deg);
+		}
+		100%{
+			transform:rotate(315deg);
 		}
 	}
 	@-webkit-keyframes three{
